@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08A05CB41FA36B3B00512F71 /* GIFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A05CB31FA36B3B00512F71 /* GIFViewController.m */; };
+		08A05CB71FA36F5100512F71 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A05CB61FA36F5100512F71 /* UIImage+GIF.m */; };
 		D97E77FA1F36DE8900450835 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D97E77F91F36DE8900450835 /* AppDelegate.m */; };
 		D97E77FD1F36DE8900450835 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97E77FC1F36DE8900450835 /* ViewController.m */; };
 		D97E78001F36DE8900450835 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D97E77FE1F36DE8900450835 /* Main.storyboard */; };
@@ -66,6 +68,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08A05CB21FA36B3B00512F71 /* GIFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIFViewController.h; sourceTree = "<group>"; };
+		08A05CB31FA36B3B00512F71 /* GIFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIFViewController.m; sourceTree = "<group>"; };
+		08A05CB51FA36F5100512F71 /* UIImage+GIF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		08A05CB61FA36F5100512F71 /* UIImage+GIF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
 		D97E77F51F36DE8900450835 /* YYWebImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYWebImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97E77F81F36DE8900450835 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D97E77F91F36DE8900450835 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -214,6 +220,10 @@
 				D9EF64091F36E24D00AB19C3 /* YYWebImageExample.m */,
 				D9EF640A1F36E24D00AB19C3 /* YYImageExampleHelper.h */,
 				D9EF640B1F36E24D00AB19C3 /* YYImageExampleHelper.m */,
+				08A05CB21FA36B3B00512F71 /* GIFViewController.h */,
+				08A05CB31FA36B3B00512F71 /* GIFViewController.m */,
+				08A05CB51FA36F5100512F71 /* UIImage+GIF.h */,
+				08A05CB61FA36F5100512F71 /* UIImage+GIF.m */,
 			);
 			path = YYWebImageDemo;
 			sourceTree = "<group>";
@@ -456,12 +466,14 @@
 				D9EF640C1F36E24D00AB19C3 /* YYImageExample.m in Sources */,
 				D9EF63CE1F36DF7C00AB19C3 /* YYImageCoder.m in Sources */,
 				D9EF63D01F36DF7C00AB19C3 /* YYImageCache.m in Sources */,
+				08A05CB71FA36F5100512F71 /* UIImage+GIF.m in Sources */,
 				D9EF63C11F36DF7C00AB19C3 /* YYCache.m in Sources */,
 				D9EF63DE1F36DFEE00AB19C3 /* UIControl+YYAdd.m in Sources */,
 				D9EF63D11F36DF7C00AB19C3 /* YYWebImageManager.m in Sources */,
 				D9EF63CC1F36DF7C00AB19C3 /* YYFrameImage.m in Sources */,
 				D9EF63C41F36DF7C00AB19C3 /* YYMemoryCache.m in Sources */,
 				D9EF63DF1F36DFEE00AB19C3 /* UIGestureRecognizer+YYAdd.m in Sources */,
+				08A05CB41FA36B3B00512F71 /* GIFViewController.m in Sources */,
 				D97E77FA1F36DE8900450835 /* AppDelegate.m in Sources */,
 				D9EF63CD1F36DF7C00AB19C3 /* YYImage.m in Sources */,
 				D9EF63D21F36DF7C00AB19C3 /* YYWebImageOperation.m in Sources */,
@@ -606,6 +618,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMPRESS_PNG_FILES = NO;
+				DEVELOPMENT_TEAM = 5YX3HT6M5M;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Vendor\"";
 				INFOPLIST_FILE = YYWebImageDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -621,6 +634,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMPRESS_PNG_FILES = NO;
+				DEVELOPMENT_TEAM = 5YX3HT6M5M;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../Vendor\"";
 				INFOPLIST_FILE = YYWebImageDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

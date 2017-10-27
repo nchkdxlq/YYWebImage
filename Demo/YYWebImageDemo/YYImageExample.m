@@ -12,6 +12,7 @@
 #import <ImageIO/ImageIO.h>
 #import <WebP/demux.h>
 
+
 @interface YYImageExample()
 @property (nonatomic, strong) NSMutableArray *titles;
 @property (nonatomic, strong) NSMutableArray *classNames;
@@ -28,6 +29,7 @@
     [self addCell:@"Progressive Image" class:@"YYImageProgressiveExample"];
     [self addCell:@"Web Image" class:@"YYWebImageExample"];
     //[self addCell:@"Benchmark" class:@"YYImageBenchmark"];
+    [self addCell:@"GIF" class:@"GIFViewController"];
     [self.tableView reloadData];
 }
 
