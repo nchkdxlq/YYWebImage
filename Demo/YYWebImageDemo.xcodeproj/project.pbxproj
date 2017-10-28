@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		083BCF511FA46A56000F9F46 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 083BCF4E1FA46A56000F9F46 /* FLAnimatedImage.m */; };
+		083BCF521FA46A56000F9F46 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 083BCF501FA46A56000F9F46 /* FLAnimatedImageView.m */; };
+		083BCF551FA46AC3000F9F46 /* FLAnimatedImageExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 083BCF541FA46AC3000F9F46 /* FLAnimatedImageExample.m */; };
 		08A05CC81FA4675500512F71 /* YYGIFImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A05CC71FA4675500512F71 /* YYGIFImageViewController.m */; };
 		08A05CCF1FA468CC00512F71 /* LQProgressiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A05CCA1FA468CC00512F71 /* LQProgressiveViewController.m */; };
 		08A05CD01FA468CC00512F71 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A05CCB1FA468CC00512F71 /* UIImage+GIF.m */; };
@@ -70,6 +73,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		083BCF4D1FA46A56000F9F46 /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
+		083BCF4E1FA46A56000F9F46 /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
+		083BCF4F1FA46A56000F9F46 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
+		083BCF501FA46A56000F9F46 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
+		083BCF531FA46AC3000F9F46 /* FLAnimatedImageExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageExample.h; sourceTree = "<group>"; };
+		083BCF541FA46AC3000F9F46 /* FLAnimatedImageExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageExample.m; sourceTree = "<group>"; };
 		08A05CC61FA4675500512F71 /* YYGIFImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYGIFImageViewController.h; sourceTree = "<group>"; };
 		08A05CC71FA4675500512F71 /* YYGIFImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYGIFImageViewController.m; sourceTree = "<group>"; };
 		08A05CC91FA468CB00512F71 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
@@ -192,9 +201,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		083BCF4C1FA46A56000F9F46 /* FLAnimatedImage */ = {
+			isa = PBXGroup;
+			children = (
+				083BCF4D1FA46A56000F9F46 /* FLAnimatedImage.h */,
+				083BCF4E1FA46A56000F9F46 /* FLAnimatedImage.m */,
+				083BCF4F1FA46A56000F9F46 /* FLAnimatedImageView.h */,
+				083BCF501FA46A56000F9F46 /* FLAnimatedImageView.m */,
+			);
+			path = FLAnimatedImage;
+			sourceTree = "<group>";
+		};
 		08A05CBC1FA466E500512F71 /* GIFImage */ = {
 			isa = PBXGroup;
 			children = (
+				083BCF4C1FA46A56000F9F46 /* FLAnimatedImage */,
 				08A05CCC1FA468CC00512F71 /* GIFViewController.h */,
 				08A05CCD1FA468CC00512F71 /* GIFViewController.m */,
 				08A05CCE1FA468CC00512F71 /* LQProgressiveViewController.h */,
@@ -203,6 +224,8 @@
 				08A05CCB1FA468CC00512F71 /* UIImage+GIF.m */,
 				08A05CC61FA4675500512F71 /* YYGIFImageViewController.h */,
 				08A05CC71FA4675500512F71 /* YYGIFImageViewController.m */,
+				083BCF531FA46AC3000F9F46 /* FLAnimatedImageExample.h */,
+				083BCF541FA46AC3000F9F46 /* FLAnimatedImageExample.m */,
 			);
 			path = GIFImage;
 			sourceTree = "<group>";
@@ -484,7 +507,9 @@
 				D97E78081F36DE8900450835 /* main.m in Sources */,
 				D9EF63C21F36DF7C00AB19C3 /* YYDiskCache.m in Sources */,
 				D9EF640C1F36E24D00AB19C3 /* YYImageExample.m in Sources */,
+				083BCF551FA46AC3000F9F46 /* FLAnimatedImageExample.m in Sources */,
 				D9EF63CE1F36DF7C00AB19C3 /* YYImageCoder.m in Sources */,
+				083BCF521FA46A56000F9F46 /* FLAnimatedImageView.m in Sources */,
 				D9EF63D01F36DF7C00AB19C3 /* YYImageCache.m in Sources */,
 				D9EF63C11F36DF7C00AB19C3 /* YYCache.m in Sources */,
 				D9EF63DE1F36DFEE00AB19C3 /* UIControl+YYAdd.m in Sources */,
@@ -496,6 +521,7 @@
 				D97E77FA1F36DE8900450835 /* AppDelegate.m in Sources */,
 				D9EF63CD1F36DF7C00AB19C3 /* YYImage.m in Sources */,
 				D9EF63D21F36DF7C00AB19C3 /* YYWebImageOperation.m in Sources */,
+				083BCF511FA46A56000F9F46 /* FLAnimatedImage.m in Sources */,
 				D9EF63DD1F36DFEE00AB19C3 /* CALayer+YYAdd.m in Sources */,
 				D9EF63C51F36DF7C00AB19C3 /* _YYWebImageSetter.m in Sources */,
 				D9EF63CF1F36DF7C00AB19C3 /* YYSpriteSheetImage.m in Sources */,

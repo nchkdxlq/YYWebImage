@@ -32,6 +32,7 @@
     [self addCell:@"GIF" class:@"GIFViewController"];
     [self addCell:@"LQProgressive" class:@"LQProgressiveViewController"];
     [self addCell:@"YYImage" class:@"YYGIFImageViewController"];
+    [self addCell:@"FLAnimated" class:@"FLAnimatedImageExample"];
     
     [self.tableView reloadData];
 }
