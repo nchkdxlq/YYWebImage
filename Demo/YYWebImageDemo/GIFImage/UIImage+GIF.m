@@ -17,9 +17,21 @@
         return nil;
     }
     
-    //获取数据源
-    CGImageSourceRef source = CGImageSourceCreateWithData((__bridge CFDataRef)data, NULL);
+    CFStringRef       myKeys[2];
+    CFTypeRef         myValues[2];
+    myKeys[0] = kCGImageSourceShouldCache;
+    myValues[0] = (CFTypeRef)kCFBooleanFalse;
+    myKeys[1] = kCGImageSourceShouldAllowFloat;
+    myValues[1] = (CFTypeRef)kCFBooleanTrue;
     
+    CFDictionaryRef options = CFDictionaryCreate(NULL, (const void **)myKeys, (const void **)myValues, 2, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
+    
+    //获取数据源
+    CGImageSourceRef source = CGImageSourceCreateWithData((__bridge CFDataRef)data, options);
+    CFRelease(options);
+    
+    CFStringRef type = CGImageSourceGetType(source);
+    NSLog(@"%@", (__bridge NSString *)type);
     // 获取图片数量(如果传入的是gif图的二进制，那么获取的是图片帧数)
     size_t count = CGImageSourceGetCount(source);
     

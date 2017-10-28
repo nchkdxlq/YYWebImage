@@ -1,36 +1,31 @@
 //
-//  GIFViewController.m
+//  YYGIFImageViewController.m
 //  YYWebImageDemo
 //
-//  Created by nchkdxlq on 2017/10/27.
+//  Created by nchkdxlq on 2017/10/28.
 //  Copyright © 2017年 ibireme. All rights reserved.
 //
 
-#import "GIFViewController.h"
-#import "UIImage+GIF.h"
+#import "YYGIFImageViewController.h"
+#import "YYAnimatedImageView.h"
+#import "YYImage.h"
 
-@interface GIFViewController ()
+@interface YYGIFImageViewController ()
 
 @end
 
-@implementation GIFViewController
+@implementation YYGIFImageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-    imageView.backgroundColor = [UIColor redColor];
+    YYAnimatedImageView *imageView = [[YYAnimatedImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
     [self.view addSubview:imageView];
     imageView.center = CGPointMake(CGRectGetMidX(self.view.frame), CGRectGetMidY(self.view.frame));
-    UIImage *gifImage = [UIImage sd_animatedGIFNamed:@"niconiconi"];
-    imageView.image = gifImage;
+    imageView.image = [YYImage imageNamed:@"niconiconi"];
+    
 }
-
-
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

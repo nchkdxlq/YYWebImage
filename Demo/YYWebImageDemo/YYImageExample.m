@@ -30,6 +30,9 @@
     [self addCell:@"Web Image" class:@"YYWebImageExample"];
     //[self addCell:@"Benchmark" class:@"YYImageBenchmark"];
     [self addCell:@"GIF" class:@"GIFViewController"];
+    [self addCell:@"LQProgressive" class:@"LQProgressiveViewController"];
+    [self addCell:@"YYImage" class:@"YYGIFImageViewController"];
+    
     [self.tableView reloadData];
 }
 
