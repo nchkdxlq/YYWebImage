@@ -13,6 +13,9 @@
 
 @interface GIFViewController ()
 
+@property (nonatomic, strong) UIImage *gifImage;
+@property (nonatomic, strong) UIImageView *imageView;
+
 @end
 
 @implementation GIFViewController
@@ -21,17 +24,30 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-    [self.view addSubview:imageView];
-    imageView.center = CGPointMake(CGRectGetMidX(self.view.frame), CGRectGetMidY(self.view.frame));
-    UIImage *gifImage = [UIImage sd_animatedGIFNamed:@"niconiconi"];
-    imageView.image = gifImage;
+    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+    [self.view addSubview:_imageView];
+    _imageView.center = CGPointMake(CGRectGetMidX(self.view.frame), CGRectGetMidY(self.view.frame));
+    _gifImage = [UIImage sd_animatedGIFNamed:@"niconiconi"];
+//    imageView.image = gifImage;
     
 //    NSArray *types = (__bridge NSArray *)CGImageSourceCopyTypeIdentifiers();
 //    NSLog(@"types = %@", types);
 //
 //    [self imageSourceInfo];
-    [self CFDictionaryInfo];
+//    [self CFDictionaryInfo];
+    [self getImageData];
+}
+
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [super touchesBegan:touches withEvent:event];
+    
+    if (_imageView.image) {
+        _imageView.image = nil;
+    } else {
+        _imageView.image = _gifImage;
+    }
 }
 
 
@@ -55,6 +71,43 @@
     CFDictionaryRef properties = CGImageSourceCopyProperties(imageSource, NULL);
     CFShow(properties);
 }
+
+
+- (void)getImageData
+{
+    NSString *file = [[NSBundle mainBundle] pathForResource:@"check_green" ofType:@"png"];
+    NSData *data = [NSData dataWithContentsOfFile:file];
+    NSLog(@"data.length = %ld", data.length);
+    UIImage *image = [UIImage imageWithData:data];
+    NSLog(@"image size = {%ld, %ld}", (NSInteger)image.size.width, (NSInteger)image.size.height);
+    CGDataProviderRef provider = CGImageGetDataProvider(image.CGImage);
+    NSData *pixleData = (__bridge NSData *)CGDataProviderCopyData(provider);
+    NSLog(@"pixleData.length = %ld", pixleData.length);
+    
+    
+    CGImageRef imageRef = image.CGImage;
+    size_t width = CGImageGetWidth(imageRef);
+    size_t height = CGImageGetHeight(imageRef);
+    CGImageAlphaInfo alphaInfo = CGImageGetAlphaInfo(imageRef) & kCGBitmapAlphaInfoMask;
+    BOOL hasAlpha = NO;
+    if (alphaInfo == kCGImageAlphaLast ||
+        alphaInfo == kCGImageAlphaFirst ||
+        alphaInfo == kCGImageAlphaPremultipliedLast ||
+        alphaInfo == kCGImageAlphaPremultipliedFirst) {
+        hasAlpha = YES;
+    }
+    CGBitmapInfo bitmapInfo = kCGBitmapByteOrder32Host;
+    bitmapInfo |= hasAlpha ? kCGImageAlphaPremultipliedFirst : kCGImageAlphaNoneSkipFirst;
+    
+    CGContextRef context = CGBitmapContextCreate(NULL, width, height, 8, 0, CGColorSpaceCreateDeviceRGB(), bitmapInfo);
+    CGContextDrawImage(context, CGRectMake(0, 0, width, height), imageRef);
+    CGImageRef newImageRef = CGBitmapContextCreateImage(context);
+    CGContextRelease(context);
+    NSData *newImageData = (__bridge NSData *)CGDataProviderCopyData(CGImageGetDataProvider(newImageRef));
+    NSLog(@"newImageData.length = %ld", newImageData.length);
+    CGImageRelease(newImageRef);
+}
+
 
 
 

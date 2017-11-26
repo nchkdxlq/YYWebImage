@@ -14,6 +14,7 @@
 		08A05CCF1FA468CC00512F71 /* LQProgressiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A05CCA1FA468CC00512F71 /* LQProgressiveViewController.m */; };
 		08A05CD01FA468CC00512F71 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A05CCB1FA468CC00512F71 /* UIImage+GIF.m */; };
 		08A05CD11FA468CC00512F71 /* GIFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A05CCD1FA468CC00512F71 /* GIFViewController.m */; };
+		08F017AB1FAA0CBB009E6690 /* check_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 08F017AA1FAA0CB9009E6690 /* check_green.png */; };
 		D97E77FA1F36DE8900450835 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D97E77F91F36DE8900450835 /* AppDelegate.m */; };
 		D97E77FD1F36DE8900450835 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97E77FC1F36DE8900450835 /* ViewController.m */; };
 		D97E78001F36DE8900450835 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D97E77FE1F36DE8900450835 /* Main.storyboard */; };
@@ -87,6 +88,7 @@
 		08A05CCC1FA468CC00512F71 /* GIFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIFViewController.h; sourceTree = "<group>"; };
 		08A05CCD1FA468CC00512F71 /* GIFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIFViewController.m; sourceTree = "<group>"; };
 		08A05CCE1FA468CC00512F71 /* LQProgressiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQProgressiveViewController.h; sourceTree = "<group>"; };
+		08F017AA1FAA0CB9009E6690 /* check_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check_green.png; sourceTree = "<group>"; };
 		D97E77F51F36DE8900450835 /* YYWebImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYWebImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97E77F81F36DE8900450835 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D97E77F91F36DE8900450835 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -408,6 +410,7 @@
 				D9EF63F11F36E22400AB19C3 /* mew_interlaced.png */,
 				D9EF63F21F36E22400AB19C3 /* mew_baseline.gif */,
 				D9EF63F31F36E22400AB19C3 /* mew_interlaced.gif */,
+				08F017AA1FAA0CB9009E6690 /* check_green.png */,
 			);
 			name = Resources;
 			path = YYWebImageDemo;
@@ -478,6 +481,7 @@
 				D9EF63FB1F36E22400AB19C3 /* wall-e@2x.webp in Resources */,
 				D9EF64011F36E22400AB19C3 /* mew_interlaced.gif in Resources */,
 				D9EF63FD1F36E22400AB19C3 /* mew_progressive.jpg in Resources */,
+				08F017AB1FAA0CBB009E6690 /* check_green.png in Resources */,
 				D9EF63FF1F36E22400AB19C3 /* mew_interlaced.png in Resources */,
 				D9EF63F61F36E22400AB19C3 /* niconiconi@2x.gif in Resources */,
 				D9EF63FE1F36E22400AB19C3 /* mew_baseline.png in Resources */,
